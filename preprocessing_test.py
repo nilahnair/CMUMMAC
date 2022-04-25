@@ -45,7 +45,7 @@ def process_files():
             merged_df = merged_df[merged_df != 0].dropna() #dropping rows with missing values
             print(drop_path +'test/'+files_path[p]+'_'+sub_files_path[q]+'.csv')
             # Export the DF into a file
-            merged_df.to_csv(drop_path+'/test/'+files_path[p]+'_'+sub_files_path[q]+'.csv', index=False, sep=';',)
+            merged_df.to_csv(drop_path+'test/'+files_path[p]+'_'+sub_files_path[q]+'.csv', index=False, sep=';',)
 
 
 process_files()
