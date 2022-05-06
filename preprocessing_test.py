@@ -42,11 +42,14 @@ def process_files():
             merged_df = files_df[0]
             for i in range(len(files_df) - 1):
                 merged_df = pd.merge(merged_df, files_df[i + 1], on="SysTime")
-            
+            print(merged_df)
+            print(len(merged_df))
             drop_path='/data/nnair/cmu/'
             merged_df = merged_df[merged_df != 0].dropna() #dropping rows with missing values
             print(drop_path +'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv')
             # Export the DF into a file
+            print(merged_df)
+            print(len(merged_df))
             merged_df.to_csv(drop_path+'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv', index=False, sep=',',)
 
 
