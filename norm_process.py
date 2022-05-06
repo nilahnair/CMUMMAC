@@ -66,7 +66,7 @@ def statistics_measurements():
         print('\n')
         try:
             with open(path, 'r') as csvfile:
-                spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+                spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
                 for row in spamreader:
                     try:
                         try:
