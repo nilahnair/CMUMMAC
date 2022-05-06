@@ -61,7 +61,10 @@ def statistics_measurements():
 
     accumulator_measurements = np.empty((0, 45))
     
-    for path in files_path:
+    for file in files_path:
+        print(file)
+        print('\n')
+        path= dataset_path_imu + file
         print(path)
         print('\n')
         try:
