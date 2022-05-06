@@ -36,6 +36,8 @@ def process_files():
                 files_df.append(file_data)
 
             print(files_df[0])
+            print(len(files_df[0]))
+            print(len(files_df[1]))
             # Concatenate dfs into one df based on the SysTime Variable
             merged_df = files_df[0]
             for i in range(len(files_df) - 1):
@@ -45,7 +47,7 @@ def process_files():
             merged_df = merged_df[merged_df != 0].dropna() #dropping rows with missing values
             print(drop_path +'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv')
             # Export the DF into a file
-            merged_df.to_csv(drop_path+'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv', index=False, sep=';',)
+            merged_df.to_csv(drop_path+'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv', index=False, sep=',',)
 
 
 process_files()

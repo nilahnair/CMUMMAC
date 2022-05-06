@@ -93,7 +93,7 @@ def statistics_measurements():
             print("\n no file called file {}".format(dataset_path_imu + path))
             continue
                     
-        print(len(data[0]))
+        print(len(data))
         print(len(data[1]))
         print(data.type)                      
         if len(row) != 50:
