@@ -25,7 +25,8 @@ def process_files():
                 print(p,q,r,base_path + files_path[p] + "/" + sub_files_path[q] + "/" + sub_sub_files_path[r] )
                 compiled_path=base_path +files_path[p] + "/" + sub_files_path[q] + "/" + sub_sub_files_path[r]
                 file_data = pd.read_csv(compiled_path,sep='\t',skiprows=1, )
-
+                print('file data')
+                print(file_data)
                 # Renaming columns
                 new_columns = list(file_data.columns)
                 for i in range(len(new_columns)):
@@ -35,22 +36,20 @@ def process_files():
 
                 files_df.append(file_data)
 
-            print(len(files_df[0]))
-            print(len(files_df[1]))
             # Concatenate dfs into one df based on the SysTime Variable
             merged_df = files_df
-            print('after merge')
-            print(merged_df)
-            print(len(merged_df))
+           # print('after merge')
+            #print(merged_df)
+           # print(len(merged_df))
             drop_path='/data/nnair/cmu/'
             merged_df = merged_df[merged_df != 0].dropna() #dropping rows with missing values
-            print('after removing values')
-            print(merged_df)
-            print(len(merged_df))
-            print(drop_path +'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv')
+           # print('after removing values')
+           # print(merged_df)
+           # print(len(merged_df))
+           # print(drop_path +'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv')
             # Export the DF into a file
-            print(merged_df)
-            print(len(merged_df))
+           # print(merged_df)
+           # print(len(merged_df))
             merged_df.to_csv(drop_path+'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv', index=False, sep=',',)
 
 
