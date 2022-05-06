@@ -35,7 +35,8 @@ def process_files():
                 file_data.columns = new_columns
 
                 files_df.append(file_data)
-
+            print('appended')
+            print(files_df)
             # Concatenate dfs into one df based on the SysTime Variable
             merged_df = files_df
            # print('after merge')
