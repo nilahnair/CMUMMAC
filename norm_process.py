@@ -40,7 +40,7 @@ all_recipie= {'S07':0, 'S08':1, 'S09':2, 'S12':3, 'S15':4, 'S16':5, 'S17':6, 'S1
            'S20':9,'S21':10, 'S25':11, 'S28':12, 'S29':13, 'S30':14, 'S31':15, 'S32':16, 'S34':17, 
            'S35':18, 'S47':19, 'S49':20, 'S50':21, 'S51':22, 'S53':23, 'S54':24, 'S55':25}
 
-sensora=['Accel_X_ts1_x', 'Accel_Y_ts1_x', 'Accel_Z_ts1_x', 'Roll_tsi_x', 'Pitch_tsi_x', 'Yaw_ts1_x', 'Mag_X_ts1_x', 'Mag_Y_ts1_x', 'Mag_Z_ts1_x', 'Count_ts1_x', 
+sensora=['Accel_X_ts1_x', 'Accel_Y_ts1_x', 'Accel_Z_ts1_x', 'Roll_ts1_x', 'Pitch_ts1_x', 'Yaw_ts1_x', 'Mag_X_ts1_x', 'Mag_Y_ts1_x', 'Mag_Z_ts1_x', 'Count_ts1_x', 
          'Accel_X_ts2_x', 'Accel_Y_ts2_x', 'Accel_Z_ts2_x', 'Roll_ts2_x', 'Pitch_ts2_x', 'Yaw_ts2_x', 'Mag_X_ts2_x', 'Mag_Y_ts2_x', 'Mag_Z_ts2_x', 'Count_ts2_x', 
          'Accel_X_ts3_x', 'Accel_Y_ts3_x', 'Accel_Z_ts3_x', 'Roll_ts3_x', 'Pitch_ts3_x', 'Yaw_ts3_x', 'Mag_X_ts3_x', 'Mag_Y_ts3_x', 'Mag_Z_ts3_x', 'Count_ts3_x', 
          'Accel_X_ts4_x', 'Accel_Y_ts4_x', 'Accel_Z_ts4_x', 'Roll_ts4_x', 'Pitch_ts4_x', 'Yaw_ts4_x', 'Mag_X_ts4_x', 'Mag_Y_ts4_x', 'Mag_Z_ts4_x', 'Count_ts4_x', 
@@ -108,7 +108,7 @@ def statistics_measurements():
                 accumulator_measurements = np.append(accumulator_measurements, data_new, axis=0)
                 print("\nFiles loaded")
             except:
-                print("\n1 In loading data,  in file {}".format(dataset_path_imu + file_name_data))
+                print("\n1 In loading data,  in file {}".format(dataset_path_imu + path))
                 continue
                             
     

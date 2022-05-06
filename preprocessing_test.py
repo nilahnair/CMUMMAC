@@ -35,17 +35,18 @@ def process_files():
 
                 files_df.append(file_data)
 
-            print(files_df[0])
             print(len(files_df[0]))
             print(len(files_df[1]))
             # Concatenate dfs into one df based on the SysTime Variable
-            merged_df = files_df[0]
-            for i in range(len(files_df) - 1):
-                merged_df = pd.merge(merged_df, files_df[i + 1], on="SysTime")
+            merged_df = files_df
+            print('after merge')
             print(merged_df)
             print(len(merged_df))
             drop_path='/data/nnair/cmu/'
             merged_df = merged_df[merged_df != 0].dropna() #dropping rows with missing values
+            print('after removing values')
+            print(merged_df)
+            print(len(merged_df))
             print(drop_path +'test/'+files_path[p]+'/'+sub_files_path[q]+'.csv')
             # Export the DF into a file
             print(merged_df)
