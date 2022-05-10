@@ -39,6 +39,8 @@ def process_files():
             print(files_df)
             # Concatenate dfs into one df based on the SysTime Variable
             merged_df = files_df
+            print('actual')
+            print(merged_df)
            # print('after merge')
             #print(merged_df)
            # print(len(merged_df))
